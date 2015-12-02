@@ -1,0 +1,131 @@
+GeoVoCamp2015DC
+EminencesODP
+2015-11-30 to 2015-12-02
+=========
+Organizer:
+Gaurav Sinha (Ohio University)
+=========
+Participants:
+Samantha Arundel (USGS CEGIS)
+Chen-Chieh from NUS (Singapore & UIUC)
+Joshua Lieberman (Harvard)
+Briana Sullivan (University of New Hampshire)
+David Mark (University of Buffalo)
+Richard Markeloff (Raytheon BBN Technologies)
+Boleslo E. Romero (UCSB)
+Lynn Usery (USGS)
+=========
+Notes (by BER)
+=========
+
+Topographic Eminences
+	Topographic may not be correct term for just 'land' features
+	
+Topic was first posed as feature extraction work
+Topic was reframed as types in current taxonomies
+
+Various taxonomies available sometimes related
+GNIS from USGS only features
+SDTS partially from GNIS, GeoNames
+GeoNames partially from Nat map. agencies
+SDTS was multiagency, but too complicated for significant uptake
+
+Perhaps Neural Networks could help with matching eminence terms to geometry
+USGS working on how to label mountains, from manual polygons
+
+Issues with lidar, image point clouds, due to scale issues
+Can surface network be pruned to reduce noise?
+
+Using parts of a proper name will not always find the type
+
+Using metrics describing the relation of a value to the value of surrounding region will not always find eminence types
+
+Start with eminences as raised above surrounding region
+	What about eminences on side of mountain in another dimension (i.e. not top of feature)
+
+Need description of entity types:
+	Form
+	Material
+	Geographic context
+		local (with respect to other named features)
+		regional (with respect to climatic vars and process, etc)
+
+	Classification (some independent, some combined)
+		Relative height (of what? summit and surroundings?)
+		Curvature
+			plan
+			profile
+		Slope
+		Size
+			Horizontal spatial extent
+			(Elevation)
+						
+Language issues
+	Semantic similarity of names of types
+	People's known terms (from culture?)
+	Cultural features of small size which control larger domain
+
+Can we constrain scale to generic 'geographic' space, what can be seen?
+
+Maybe classify all locatioons as a feature
+Or, use a fuzzy approach
+	Likely use more criteria than elevation
+	
+Benefit of elevation is that it is defensible and cognitively simple
+
+There is the overlap of terms may be challenge or benefit (e.g. location on hillslope also on basin slope)
+
+--------
+
+Important concepts, objects, and properties ...
+
+	Description of entity types
+		Form
+		Material – physical
+		Geographical context
+			Local
+			Regional
+	Classification
+		Relative height
+		Curvature
+			Profile
+			Plan
+		Slope
+
+	Form
+		Sharp
+		Rounded
+		Flat
+	Size
+		Horizontal extent
+		Proportion to vertical extent
+	Observation (human view)
+	Scale – constrained to geographic
+
+--------
+
+Need to demonstrate purpose/benefits of ODP/Semantic Markup, especially beyond capabilities provided by GIS
+
+Axioms, use cases, and competency questions needed
+
+--------
+Summary of Concept Map:
+
+Macro properties allow recognition of types of eminences
+Wanted to take out buildings, etc (tried process, material, etc. to no avail)
+Instead use term for reference to 'planetary surface'
+However, need more than surface to include volume
+Actually need to get from surface to volume
+So the term 'region' was considered, but decided 'part' was a more useful generic term
+There are cases where top part of larger eminence can be a smaller eminence
+(There may be a possibility of using surface network courses or  contours of passes as delimiters of an eminence)
+(We also need to continue the values of 'nested contour regions'--base, sides, peak--to help discriminate types of eminences)
+(Comment: how to handle scale to discriminate an eminence? ... eminences are relative to planetary surface)
+Evaluated GeoNames in concept map (Mountain, hill, ridge)
+Removed specific values of qualities/properties
+Have not encoded, but recognize ordinal relations of properties/values of eminence types
+Values of properties help to discriminate different eminence types
+Concerned about having names guide the identification of properties and values
+Two aims for use of properties and values are to automate classification and query instances
+
+
