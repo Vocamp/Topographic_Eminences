@@ -14,6 +14,11 @@ David Mark (University of Buffalo)
 Richard Markeloff (Raytheon BBN Technologies)
 Boleslo E. Romero (UCSB)
 Lynn Usery (USGS)
+On phone:
+Ouida?
+Kathleen Stewart?
+Alex Sorokine?
+Nancy Wiengard?
 =========
 Notes (by BER)
 =========
@@ -127,5 +132,20 @@ Have not encoded, but recognize ordinal relations of properties/values of eminen
 Values of properties help to discriminate different eminence types
 Concerned about having names guide the identification of properties and values
 Two aims for use of properties and values are to automate classification and query instances
+===========
 
-
+Can an eminence be just the top part of a larger eminence?
+	(e.g. a break in slope allows a smaller, upper eminence of a larger feature beneath, especially from the view at the break in slope.)
+Eminences are considered one of many other types of landforms.
+Every eminence must also be a type of eminence, however, algorithms that only find eminences without classifying them as particular types are acceptable.
+The types of eminences (e.g. mountains, hills, ridges) are subclasses/categories of the super-ordinate 'eminence' convexities.
+So, can parts of a larger eminence be an eminence of its own? (esp. without a break in slope). In that mind, the top may be 'sliced' at any of various elevations.
+If considering North America an eminence, then there are many eminences upon it, though it may be considered a complex eminence.
+Perhaps bases, inflection points, or visual markers may help to define an eminence recognized by a group of people.
+Need to define parts at some point (for example, but not a a full or correct set of terms, a top, side, and base).
+It is also important to look at other eminence types (ridges, etc.) to potentially discover other parts/relations.
+Perhaps try the pattern to find types in GeoNames or SDTS.
+Will types only be English, or other languages/cultures/dialects?
+Guarav will take lead, though many papers possible, but may need to partition topics to allow participants to publish various pieces.
+Josh (and maybe Dave Kolas, or Torsten) may help with OWL.
+Maybe also align with BFO and Dolce.
