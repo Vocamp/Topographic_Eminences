@@ -1,0 +1,135 @@
+# baseURI: http://www.vocamp.org/GeoVoCampDC2015/eminence
+
+@prefix : <http://www.vocamp.org/GeoVoCampDC2015/eminence#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.vocamp.org/GeoVoCampDC2015/eminence>
+  rdf:type owl:Ontology ;
+  rdfs:comment "OWL model of the concept map created at the GeoVoCampDC held at USGS Headquarters, Reston, VA Nov. 30 - Dec 2, 2015."^^xsd:string ;
+  owl:versionInfo "Version 1.0"^^xsd:string ;
+.
+:Context
+  rdf:type owl:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "Context"^^xsd:string ;
+  rdfs:subClassOf :GeoProperty ;
+.
+:Eminence
+  rdf:type owl:Class ;
+  rdfs:comment "Maximal connected part of a planetary surface and the volume it bounds that is higher than the surrounding parts of the planetary surface."^^xsd:string ;
+  rdfs:label "Eminence"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom :EminenceType ;
+      owl:onProperty :hasType ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom :GeoProperty ;
+      owl:onProperty :hasGeoProperty ;
+    ] ;
+.
+:EminenceType
+  rdf:type owl:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "Eminence type"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+:Form
+  rdf:type owl:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "Form"^^xsd:string ;
+  rdfs:subClassOf :GeoProperty ;
+.
+:GeoProperty
+  rdf:type owl:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "Geo property"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+:Hill
+  rdf:type :EminenceType ;
+  rdfs:comment "A rounded elevation of limited extent rising above the surrounding land with minor local relief. (Adapted from GeoNames.)"^^xsd:string ;
+  rdfs:label "Hill"^^xsd:string ;
+.
+:HorizontalExtent
+  rdf:type owl:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "Horizontal extent"^^xsd:string ;
+  rdfs:subClassOf :Size ;
+.
+:Material
+  rdf:type owl:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "Material"^^xsd:string ;
+  rdfs:subClassOf :GeoProperty ;
+.
+:Mountain
+  rdf:type :EminenceType ;
+  rdfs:comment "An elevation standing high above the surrounding area with small summit area, steep slopes, and major local relief. (Adapted from GeoNames.)"^^xsd:string ;
+  rdfs:label "Mountain"^^xsd:string ;
+.
+:PlanetarySurface
+  rdf:type owl:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "Planetary surface"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+:Process
+  rdf:type owl:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "Process"^^xsd:string ;
+  rdfs:subClassOf :GeoProperty ;
+.
+:Ridge
+  rdf:type :EminenceType ;
+  rdfs:comment "A long narrow elevation with steep sides, and a more or less continuous crest. (Adapted from GeoNames.)"^^xsd:string ;
+  rdfs:label "Ridge"^^xsd:string ;
+.
+:Size
+  rdf:type owl:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "Size"^^xsd:string ;
+  rdfs:subClassOf :GeoProperty ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom :Size ;
+      owl:onProperty :hasExtent ;
+    ] ;
+.
+:VerticalExtent
+  rdf:type owl:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "Vertical extent"^^xsd:string ;
+  rdfs:subClassOf :Size ;
+.
+:View
+  rdf:type owl:Class ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "View"^^xsd:string ;
+  rdfs:subClassOf :GeoProperty ;
+.
+:hasExtent
+  rdf:type rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "has extent"^^xsd:string ;
+.
+:hasGeoProperty
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "has geo property"^^xsd:string ;
+.
+:hasType
+  rdf:type rdf:Property ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "has type"^^xsd:string ;
+.
+:partOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:comment ""^^xsd:string ;
+  rdfs:label "part of"^^xsd:string ;
+.
